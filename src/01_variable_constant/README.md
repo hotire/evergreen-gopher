@@ -1,2 +1,3 @@
 # 변수와 상수 
 
+http://golang.site/go/article/4-Go-%EB%B3%80%EC%88%98%EC%99%80-%EC%83%81%EC%88%98
