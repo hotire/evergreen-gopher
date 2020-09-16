@@ -29,8 +29,14 @@ const (
 ~~~
 이렇게 상수를 묶어서 지정도 가능하다. 
 
-
-
+~~~go
+const (
+    Apple = iota // 0
+    Grape        // 1
+    Orange       // 2
+)
+~~~
+iota를 사용하면 순차적으로 증가된 값을 사용할 수 있다. (enum ordinal 같은 느낌..??)
 
 
 
