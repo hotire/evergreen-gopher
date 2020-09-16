@@ -13,6 +13,24 @@ var a int  = 1
 변수(정수) a 를 선언 및 초기화(1) 또한 초기화 값을 통해 타입 추론이 가능하다. 
 
 
+## 상수 
+
+상수는 Go 키워드 const 를 사용하여 선언한다. const 키워드 뒤에 상수명을 적고, 그 뒤에 상수타입, 그리고 상수값을 할당한다.
+
+~~~go
+const age int = 30
+const name string = "hotire"
+
+const (
+    Visa = "Visa"
+    Master = "MasterCard"
+    Amex = "American Express"
+)
+~~~
+이렇게 상수를 묶어서 지정도 가능하다. 
+
+
+
 
 
 
