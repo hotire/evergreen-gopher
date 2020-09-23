@@ -47,3 +47,20 @@ swtich 뒤에 조건변수 / Expression를 적지 않는다. if / else if / else
 ### No default fall through
 
 다른 언어의 case문은 break를 쓰지 않는 한 다음 case로 이동하지만, Go는 다음 case로 가지 않는다
+
+### Type switch
+
+다른 언어의 switch는 일반적으로 변수의 값을 기준으로 case로 분기하지만, Go는 그 변수의 Type에 따라 case로 분기할 수 있다
+
+~~~go
+	switch v.(type) {
+	case int:
+		println("int")
+	case bool:
+		println("bool")
+	case string:
+		println("string")
+	default:
+		println("unknown")
+	}	
+~~~
