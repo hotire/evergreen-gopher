@@ -38,3 +38,12 @@ func grade(score int) {
 ~~~
 
 swtich 뒤에 조건변수 / Expression를 적지 않는다. if / else if / else 처럼 사용하는 방식이다. 
+
+
+### case문에 expression을 쓸 수 있음
+
+다른 언어의 case문은 일반적으로 리터럴 값만을 갖지만, Go는 case문에 복잡한 expression을 가질 수 있다
+
+### No default fall through
+
+다른 언어의 case문은 break를 쓰지 않는 한 다음 case로 이동하지만, Go는 다음 case로 가지 않는다
