@@ -2,6 +2,7 @@
 
 Go는 반복문에 for 하나 밖에 없다. 다만, "초기값; 조건식; 증감"을 둘러싸는 괄호 ( )를 생략하는데, 괄호를 쓰면 에러가 난다.
 
+http://golang.site/go/article/8-Go-%EB%B0%98%EB%B3%B5%EB%AC%B8
 
 ### 조건식만 쓰는 for 루프
 
