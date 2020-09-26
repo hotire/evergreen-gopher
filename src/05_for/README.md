@@ -22,3 +22,17 @@ func main() {
     println(n)
 }
 ~~~
+
+### for 문 - 무한루프
+
+for 루프로 무한루프를 만들려면 "초기값; 조건식; 증감" 모두를 생략하면 된다
+
+~~~go
+package main
+ 
+func main() {
+    for {
+        println("Infinite loop")        
+    }
+}
+~~~
