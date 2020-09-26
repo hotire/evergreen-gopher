@@ -37,3 +37,15 @@ func main() {
 }
 ~~~
 * 빠져나오기 위해서 Ctrl+C 
+
+
+### for range 문
+
+for range 문은 컬렉션으로 부터 한 요소(element)씩 가져와 차례로 for 블럭의 문장들을 실행한다. 이는 다른 언어의 foreach와 비슷한 용법이다.
+
+~~~go
+names := []string{"홍길동", "이순신", "강감찬"}
+for index, name := range names {
+    println(index, name)
+}
+~~~
