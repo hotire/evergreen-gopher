@@ -49,3 +49,26 @@ for index, name := range names {
     println(index, name)
 }
 ~~~
+
+### break, continue, goto 문
+
+break문은 보통 단독으로 사용되지만, 경우에 따라 "break 레이블"과 같이 사용하여 지정된 레이블로 이동할 수도 있다. break의 "레이블"은 보통 현재의 for 루프를 바로 위에 적게 되는데, 이러한 "break 레이블"은 현재의 루프를 빠져나와 지정된 레이블로 이동하고, break문의 직속 for 루프 전체의 다음 문장을 실행하게 한다. 아래 예제는 언뜻 보기에 무한루프를 돌 것 같지만, 실제로는 OK를 출력하고 프로그램을 정상 종료한다. 이는 "break L1" 문이 for 루프를 빠져나와 L1 레이블로 이동한 후, break가 있는 현재 for 루프를 건너뛰고 다음 문장인 println() 으로 이동하기 때문이다.
+
+
+~~~go
+package main
+ 
+func main() {
+    i := 0
+ 
+L1:
+    for {
+     
+        if i == 0 {
+            break L1
+        }
+    }
+ 
+    println("OK")
+}
+~~~
