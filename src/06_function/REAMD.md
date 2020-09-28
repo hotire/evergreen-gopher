@@ -13,3 +13,11 @@ func say(msg string) {
     println(msg)
 }
 ~~~~
+
+## Pass By Reference
+
+Go에서 파라미터를 전달하는 방식은 크게 Pass By Value와 Pass By Reference로 나뉜다.
+
+### Pass By Value
+
+위의 [1. 함수]의 예제에서는 msg의 값 "Hello" 문자열이 복사되어 함수 say()에 전달된다. 즉, 만약 파라미터 msg의 값이 say() 함수 내에서 변경된다하더라도 호출함수 main()에서의 msg 변수는 변함이 없다
