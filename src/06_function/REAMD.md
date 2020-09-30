@@ -28,3 +28,17 @@ Go에서 파라미터를 전달하는 방식은 크게 Pass By Value와 Pass By 
 ### Pass By Reference
 
 아래의 예제에서처럼 msg 변수앞에 & 부호를 붙이면 msg 변수의 주소를 표시하게 된다. 흔히 포인터라 불리우는 이 용법을 사용하면 함수에 msg 변수의 값을 복사하지 않고 msg 변수의 주소를 전달하게 된다. 피호출 함수 say()에서는 *string 과 같이 파라미터가 포인터임을 표시하고 이때 say 함수의 msg는 문자열이 아니라 문자열을 갖는 메모리 영역의 주소를 갖게 된다. msg 주소에 데이타를 쓰기 위해서는 *msg = "" 과 같이 앞에 *를 붙이는데 이를 흔히 Dereferencing 이라 한다.
+
+~~~go
+package main
+func main() {
+    msg := "Hello"
+    say(&msg)
+    println(msg) //변경된 메시지 출력
+}
+ 
+func say(msg *string) {
+    println(*msg)
+    *msg = "Changed" //메시지 변경
+}
+~~~
