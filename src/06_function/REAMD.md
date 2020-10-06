@@ -42,3 +42,15 @@ func say(msg *string) {
     *msg = "Changed" //메시지 변경
 }
 ~~~
+
+## Variadic Function (가변인자함수)
+
+함수에 고정된 수의 파라미터들을 전달하지 않고 다양한 숫자의 파라미터를 전달하고자 할 때 가변 파라미터를 나타내는 ... (3개의 마침표)을 사용한다. 즉 문자열 가변 파라미터를 나타내기 위해서 ...string 과 같이 표현한다. 
+
+~~~go
+func say(msg ...string) {
+    for _, s := range msg {
+        println(s)
+    }
+}
+~~~
