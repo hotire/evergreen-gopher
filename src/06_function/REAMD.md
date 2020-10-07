@@ -58,9 +58,6 @@ func say(msg ...string) {
 ### 함수 리턴값
 Go 프로그래밍 언어에서 함수는 리턴값이 없을 수도, 리턴값이 하나 일 수도, 또는 리턴값이 복수 개일 수도 있다. Java 언어에서 void 혹은 하나의 값만을 리턴하는 것과 대조적으로 Go 언어는 복수개의 값을 리턴할 수 있다.
 
-- Go 언어는 또한 Named Return Parameter 라는 기능을 제공하는데, 이는 리턴되는 값들을 (함수에 정의된) 리턴 파라미터들에 할당할 수 있는 기능이다.
-
-
 Go에서 복수 개의 값을 리턴하기 위해서는 해당 리턴 타입들을 괄호 ( ) 안에 적어 준다. 예를 들어, 처음 리턴값이 int이고 두번째 리턴값이 string 인 경우 (int, string) 과 같이 적어 준다.
 
 ~~~go
@@ -79,5 +76,21 @@ func sum(nums ...int) (int, int) {
         count++
     }
     return count, s
+}
+~~~
+
+### Named Return Parameter
+
+Go 언어는 또한 Named Return Parameter 라는 기능을 제공하는데, 이는 리턴되는 값들을 (함수에 정의된) 리턴 파라미터들에 할당할 수 있는 기능이다.
+
+Go에서 Named Return Parameter들에 리턴값들을 할당하여 리턴할 수 있는데, 이는 리턴되는 값들이 여러 개일 때, 코드 가독성을 높이는 장점이 있다. 
+
+~~~go
+func sum(nums ...int) (count int, total int) {
+    for _, n := range nums {
+        total += n
+    }
+    count = len(nums)
+    return
 }
 ~~~
