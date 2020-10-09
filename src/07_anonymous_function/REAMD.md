@@ -1,5 +1,7 @@
 # Anonymous Function
 
+http://golang.site/go/article/10-Go-%EC%9D%B5%EB%AA%85%ED%95%A8%EC%88%98
+
 함수명을 갖지 않는 함수를 익명함수(Anonymous Function)이라 부른다. 일반적으로 익명함수는 그 함수 전체를 변수에 할당하거나 다른 함수의 파라미터에 직접 정의되어 사용되곤 한다. 아래 예제는 main() 함수 안에서 익명함수가 선언되어 sum이라는 변수에 할당되고 있음을 보여준다.
 
 ~~~go
