@@ -1,5 +1,7 @@
 # Closure
 
+http://golang.site/go/article/11-Go-%ED%81%B4%EB%A1%9C%EC%A0%80
+
 Go 언어에서 함수는 Closure로서 사용될 수도 있다. Closure는 함수 바깥에 있는 변수를 참조하는 함수값(function value)를 일컫는데, 이때의 함수는 바깥의 변수를 마치 함수 안으로 끌어들인 듯이 그 변수를 읽거나 쓸 수 있게 된다.
 
 ex)
