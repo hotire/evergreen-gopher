@@ -1,5 +1,7 @@
 # Array
 
+http://golang.site/go/article/12-Go-%EC%BB%AC%EB%A0%89%EC%85%98---%EB%B0%B0%EC%97%B4
+
 배열은 연속적인 메모리 공간에 동일한 타입의 데이타를 순서적으로 저장하는 자료구조이다. Go에서 배열의 첫번째 요소는 0번, 그 다음은 1번, 2번 등으로 인덱스를 매긴다 (Zero based array).
 
 ### 배열의 초기화
