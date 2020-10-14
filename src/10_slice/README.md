@@ -15,3 +15,14 @@ func main() {
     fmt.Println(a)     // [1, 10, 3]출력
 }
 ~~~
+
+### make 
+
+Go에서 Slice를 생성하는 또 다른 방법으로 Go의 내장함수 make() 함수를 이용할 수 있다. make() 함수로 슬라이스를 생성하면, 개발자가 슬라이스의 길이(Length)와 용량(Capacity)을 임의로 지정할 수 있는 장점이 있다. make() 함수의 첫번째 파라미터에 생성할 슬라이스 타입을 지정하고, 두번째는 Length (슬라이스의 길이), 그리고 세번째는 Capacity (내부 배열의 최대 길이)를 지정하면, 모든 요소가 Zero value인 슬라이스를 만들게 된다. 여기서 만약 세번째 Capacity 파라미터를 생략하면 Capacity는 Length와 같은 값을 갖는다. 그리고 슬라이스의 길이 및 용량은 내장함수 len(), cap()을 써서 확인할 수 있다.
+
+~~~go
+func main() {
+    s := make([]int, 5, 10)
+    println(len(s), cap(s)) // len 5, cap 10
+}
+~~~
