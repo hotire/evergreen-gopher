@@ -78,3 +78,20 @@ func main() {
 - 기존 언어들의 List와 같다.
 
 한 슬라이스를 다른 슬라이스 뒤에 병합하기 위해서는 아래 예제와 같이 append()를 사용한다. 이 append 함수에서는 2개의 슬라이스를 파라미터로 갖는데, 처음 슬라이스 뒤에 두번째 파라미터의 슬라이스를 추가하게 된다. 여기서 한가지 주의할 것은 두번째 슬라이스 뒤에 ... 을 붙인다는 것인데, 이 ellipsis(...)는 해당 슬라이스의 컬렉션을 표현하는 것으로 두번째 슬라이스의 모든 요소들의 집합을 나타낸다. 즉, 아래 예제에서 sliceB... 는 4, 5, 6 으로 치환된다고 볼 수 있다.
+
+~~~go
+package main
+ 
+import "fmt"
+ 
+func main() {
+    sliceA := []int{1, 2, 3}
+    sliceB := []int{4, 5, 6}
+ 
+    sliceA = append(sliceA, sliceB...)
+    //sliceA = append(sliceA, 4, 5, 6)
+ 
+    fmt.Println(sliceA) // [1 2 3 4 5 6] 출력
+}
+
+~~~
