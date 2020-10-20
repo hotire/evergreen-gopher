@@ -95,3 +95,15 @@ func main() {
 }
 
 ~~~
+
+이러한 추가/확장 기능과 더불어, Go 슬라이스는 내장함수 copy()를 사용하여 한 슬라이스를 다른 슬라이스로 복사할 수도 있다. 아래 예제는 3개의 요소를 갖는 소스 슬라이스를 그 2배의 크기 즉 6개를 갖는 타겟슬라이스로 복사하는 예를 보여준다. 
+
+~~~go
+func main() {
+    source := []int{0, 1, 2}
+    target := make([]int, len(source), cap(source)*2)
+    copy(target, source)
+    fmt.Println(target)  // [0 1 2 ] 출력
+    println(len(target), cap(target)) // 3, 6 출력
+}
+~~~
