@@ -28,3 +28,29 @@ tickers := map[string]string{
     "FB":   "FaceBook",
 }
 ~~~
+
+처음 map이 make() 함수에 의해 초기화 되었을 때는, 아무 데이타가 없는 상태이다. 이때 새로운 데이타를 추가하기 위해서는 "map변수[키] = 값" 과 같이 해당 키에 그 값을 할당하면 된다. 예를 들면, 아래 예제에서 키 901 에 Apple을 할당하면 새 해시 키-값 쌍이 추가된다. 만약 키 901의 값이 이미 존재했다면, 추가대신 값만 갱신한다.
+
+~~~go
+package main
+ 
+func main() {
+    var m map[int]string
+ 
+    m = make(map[int]string)
+    //추가 혹은 갱신
+    m[901] = "Apple"
+    m[134] = "Grape"
+    m[777] = "Tomato"
+ 
+    // 키에 대한 값 읽기
+    str := m[134]
+    println(str)
+ 
+    noData := m[999] // 값이 없으면 nil 혹은 zero 리턴
+    println(noData)
+ 
+    // 삭제
+    delete(m, 777)
+}
+~~~
