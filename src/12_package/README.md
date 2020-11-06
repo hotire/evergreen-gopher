@@ -17,3 +17,13 @@ main 패키지 안의 main() 함수가 프로그램의 시작점 즉 Entry Point
 ## 패키지 Import
 
 다른 패키지를 프로그램에서 사용하기 위해서는 import 를 사용하여 패키지를 포함시킨다. 예를 들어, Go의 표준 라이브러리인 fmt 패키지를 사용하기 위하여, import "fmt" 와 같이 해당 패키지를 포함시킬 것을 선언해 준다. Import 후에는 아래 예제처럼 fmt 패키지의 Println() 함수를 호출하여 사용할 수 있다.
+
+~~~go
+package main
+ 
+import "fmt"
+ 
+func main(){
+ fmt.Println("Hello")
+}
+~~~
