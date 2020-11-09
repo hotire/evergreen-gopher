@@ -46,3 +46,11 @@ func init() {   // 패키지 로드시 map 초기화
     pop = make(map[string]string)
 }
 ~~~
+
+경우에 따라 패키지를 import 하면서 단지 그 패키지 안의 init() 함수만을 호출하고자 하는 케이스가 있다. 
+이런 경우는 패키지 import 시 _ 라는 alias 를 지정한다. 아래는 other/xlib 패키지를 호출하면서 _ alias를 지정한 예이다.
+
+~~~go
+package main
+import _ "other/xlib"
+~~~
