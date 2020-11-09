@@ -36,3 +36,13 @@ func main(){
 
 ## 패키지 init 함수와 alias
 개발자가 패키지를 작성할 때, 패키지 실행시 처음으로 호출되는 init() 함수를 작성할 수 있다. 즉, init 함수는 패키지가 로드되면서 실행되는 함수로 별도의 호출 없이 자동으로 호출된다.
+
+~~~go
+package testlib
+ 
+var pop map[string]string
+ 
+func init() {   // 패키지 로드시 map 초기화
+    pop = make(map[string]string)
+}
+~~~
