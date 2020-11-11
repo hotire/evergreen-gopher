@@ -58,3 +58,30 @@ import _ "other/xlib"
 ## 사용자 정의 패키지 생성
 개발자는 사용자 정의 패키지를 만들어 재사용 가능한 컴포넌트를 만들어 사용할 수 있다. 사용자 정의 라이브러리 패키지는 일반적으로 폴더를 하나 만들고 그 폴더 안에 .go 파일들을 만들어 구성한다. 하나의 서브 폴더안에 있는 .go 파일들은 동일한 패키지명을 가지며, 패키지명은 해당 폴더의 이름과 같게 한다. 즉, 해당 폴더에 있는 여러 *.go 파일들은 하나의 패키지로 묶인다.
 
+~~~go
+package testlib
+ 
+import "fmt"
+ 
+var pop map[string]string
+ 
+func init() {
+    pop = make(map[string]string)
+    pop["Adele"] = "Hello"
+    pop["Alicia Keys"] = "Fallin'"
+    pop["John Legend"] = "All of Me"
+}
+ 
+// GetMusic : Popular music by singer (외부에서 호출 가능)
+func GetMusic(singer string) string {
+    return pop[singer]
+}
+ 
+func getKeys() {  // 내부에서만 호출 가능
+    for _, kv := range pop {
+        fmt.Println(kv)
+    }
+}
+~~~
+
+- 예제로 간단한 패키지를 만들기 위해 /src 폴더 안에 (임의의 폴더명으로) 24lab.net/testlib 폴더를 생성한 후에 다음 코드를 music.go 라는 파일에 저장한다. 여기서 패키지명은 폴더명과 동일하게 testlib로 정해주어야 한다. 패키지 폴더 안에 여러 파일들이 있을 경우에도, 동일하게 testlib 패키지명을 사용한다.
