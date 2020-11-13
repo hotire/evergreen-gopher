@@ -88,3 +88,6 @@ func getKeys() {
 - 예제로 간단한 패키지를 만들기 위해 /src 폴더 안에 (임의의 폴더명으로) 24lab.net/testlib 폴더를 생성한 후에 다음 코드를 music.go 라는 파일에 저장한다. 여기서 패키지명은 폴더명과 동일하게 testlib로 정해주어야 한다. 패키지 폴더 안에 여러 파일들이 있을 경우에도, 동일하게 testlib 패키지명을 사용한다.
 
 Optional : 사이즈가 큰 복잡한 라이브러리 같은 경우, "go install" 명령을 사용하여 라이브러리를 컴파일하여 Cache할 수 있는데, 이렇게 하면 다음 빌드시 빌드타임을 크게 줄일 수 있다. Go 패키지를 빌드하고 /pkg 폴더에 인스톨하기 위해서 "go install" 명령어를 아래 그림과 같이 testlib 폴더안에서 실행할 수 있다. 이 명령어가 실행되면, testlib.a 라는 파일이 /pkg/windows_amd64/24lab.net 안에 생성된다 (주: 여기서 windows_amd64는 머신에 따라 변경된다. 만약 main 패키지에 go install 명령을 수행하면 /bin 폴더에 실행파일을 생성한다.).
+
+
+24lab.net/testlib 패키지가 있는 위치를 찾기 위해 GOROOT와 GOPATH의 경로를 사용하는데, GOROOT와 GOPATH에 있는 각 루트폴더의 src 밑에 24lab.net/testlib 폴더를 순서대로 찾게 된다. 즉, GOPATH가 C:\GoApp;C:\GoSrc 인경우, 지정된 라이브러리를 찾기 위해 다음과 같은 폴더를 순차적으로 검색하게 된다.
