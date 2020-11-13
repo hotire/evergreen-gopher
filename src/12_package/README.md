@@ -77,7 +77,8 @@ func GetMusic(singer string) string {
     return pop[singer]
 }
  
-func getKeys() {  // 내부에서만 호출 가능
+// 내부에서만 호출 가능
+func getKeys() {  
     for _, kv := range pop {
         fmt.Println(kv)
     }
