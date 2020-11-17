@@ -9,3 +9,7 @@ Go 언어는 객체지향 프로그래밍(Object Oriented Programming, OOP)을 �
 ### Struct 선언
 
 struct를 정의하기 위해서는 Custom Type을 정의하는데 사용하는 type 문을 사용한다. 예를 들어 name과 age 필드를 갖는 person 이라는 struct를 정의하기 위해서는 아래와 같은 type문을 사용할 수 있다. 만약 이 person 구조체를 패키지 외부에서 사용할 수 있게 하려면 (Go 패키지에서 설명하였듯이) struct명을 Person으로 변경하면 된다.
+
+### Struct 객체 생성
+
+선언된 struct 타입으로부터 객체를 생성하는 방법은 몇 가지 방법들이 있다. 위의 예제처럼 person{} 를 사용하여 빈 person 객체를 먼저 할당하고, 나중에 그 필드값을 채워넣는 방법이 있다. struct 필드를 엑세스하기 위해서는 . (dot)을 사용한다.
