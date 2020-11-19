@@ -20,3 +20,22 @@ struct를 정의하기 위해서는 Custom Type을 정의하는데 사용하는 
 
 아래 예제에서 생성자 함수 newDict()는 dict라는 struct의 map 필드를 초기화한 후 그 struct 포인터를 리턴하고 있다. 이어 main() 함수에서 struct 개체를 만들 때 dict 를 직접 생성하지 않고 대신 newDict() 함수를 호출하여 이미 초기화된 data 맵 필드를 사용하고 있다.
 
+~~~go
+package main
+ 
+type dict struct {
+    data map[int]string
+}
+ 
+//생성자 함수 정의
+func newDict() *dict {
+    d := dict{}
+    d.data = map[int]string{}
+    return &d //포인터 전달
+}
+ 
+func main() {
+    dic := newDict() // 생성자 호출
+    dic.data[1] = "A"
+}
+~~~
