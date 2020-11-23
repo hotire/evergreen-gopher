@@ -25,3 +25,10 @@ func main() {
     println(area)
 }
 ~~~
+
+
+### Value vs 포인터 receiver
+
+Value receiver는 struct의 데이타를 복사(copy)하여 전달하며, 포인터 receiver는 struct의 포인터만을 전달한다. Value receiver의 경우 만약 메서드내에서 그 struct의 필드값이 변경되더라도 호출자의 데이타는 변경되지 않는 반면, 포인터 receiver는 메서드 내의 필드값 변경이 그대로 호출자에서 반영된다.
+
+
