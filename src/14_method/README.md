@@ -32,3 +32,8 @@ func main() {
 Value receiver는 struct의 데이타를 복사(copy)하여 전달하며, 포인터 receiver는 struct의 포인터만을 전달한다. Value receiver의 경우 만약 메서드내에서 그 struct의 필드값이 변경되더라도 호출자의 데이타는 변경되지 않는 반면, 포인터 receiver는 메서드 내의 필드값 변경이 그대로 호출자에서 반영된다.
 
 
+### Go 인터페이스
+
+구조체(struct)가 필드들의 집합체라면, interface는 메서드들의 집합체이다. interface는 타입(type)이 구현해야 하는 메서드 원형(prototype)들을 정의한다. 하나의 사용자 정의 타입이 interface를 구현하기 위해서는 단순히 그 인터페이스가 갖는 모든 메서드들을 구현하면 된다.
+
+인터페이스는 struct와 마찬가지로 type 문을 사용하여 정의한다.
