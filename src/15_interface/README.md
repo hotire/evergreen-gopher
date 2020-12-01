@@ -64,3 +64,7 @@ func showArea(shapes ...Shape) {
         println(a)
     }
 ~~~
+
+### 인터페이스 타입 
+
+Go 프로그래밍을 하다보면 흔히 빈 인터페이스(empty interface)를 자주 접하게 되는데, 흔히 인터페이스 타입(interface type)으로도 불리운다. 예를 들어, 여러 표준패키지들의 함수 Prototype을 살펴보면, 아래와 같이 빈 interface 가 자주 등장함을 볼 수 있다. 빈 interface는 interface{} 와 같이 표현한다.
