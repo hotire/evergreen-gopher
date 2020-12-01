@@ -68,3 +68,9 @@ func showArea(shapes ...Shape) {
 ### 인터페이스 타입 
 
 Go 프로그래밍을 하다보면 흔히 빈 인터페이스(empty interface)를 자주 접하게 되는데, 흔히 인터페이스 타입(interface type)으로도 불리운다. 예를 들어, 여러 표준패키지들의 함수 Prototype을 살펴보면, 아래와 같이 빈 interface 가 자주 등장함을 볼 수 있다. 빈 interface는 interface{} 와 같이 표현한다.
+
+~~~go
+func Marshal(v interface{}) ([]byte, error);
+func Println(a ...interface{}) (n int, err error);
+~~~
+Empty interface는 메서드를 전혀 갖지 않는 빈 인터페이스로서, Go의 모든 Type은 적어도 0개의 메서드를 구현하므로, 흔히 Go에서 모든 Type을 나타내기 위해 빈 인터페이스를 사용한다. 
