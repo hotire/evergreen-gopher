@@ -84,3 +84,15 @@ Empty interface는 메서드를 전혀 갖지 않는 빈 인터페이스로서, 
 
 Interface type의 x와 타입 T에 대하여 x.(T)로 표현했을 때, 이는 x가 nil이 아니며, x는 T 타입에 속한다는 점을 확인(assert)하는 것으로 이러한 표현을 "Type Assertion"이라 부른다.
 만약 x가 nil 이거나 x의 타입이 T가 아니라면, 런타임 에러가 발생할 것이고, x가 T 타입인 경우는 T 타입의 x를 리턴한다. 즉, 아래 예제에서 변수 j는 a.(int)로부터 int형 변수 j가 된다.
+
+~~~go
+func main() {
+    var a interface{} = 1
+ 
+    i := a       // a와 i 는 dynamic type, 값은 1
+    j := a.(int) // j는 int 타입, 값은 1
+ 
+    println(i)  // 포인터주소 출력
+    println(j)  // 1 출력
+}
+~~~
