@@ -96,3 +96,5 @@ func main() {
     println(j)  // 1 출력
 }
 ~~~
+
+: 한마디로 Java의 type cast? kotlin as 와 비슷한 것 같다.
