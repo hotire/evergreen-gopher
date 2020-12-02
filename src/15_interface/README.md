@@ -78,3 +78,9 @@ Empty interface는 메서드를 전혀 갖지 않는 빈 인터페이스로서, 
 즉, 빈 인터페이스는 어떠한 타입도 담을 수 있는 컨테이너라고 볼 수 있으며, 여러 다른 언어에서 흔히 일컫는 Dynamic Type 이라고 볼 수 있다. (주: empty interface는 C#, Java 에서 object라 볼 수 있으며, C/C++ 에서는 void* 와 같다고 볼 수 있다)
 
 -> Java Object를 굉장히 어렵게 설명하네... / Kotlin Any
+
+
+### Type Assertion
+
+Interface type의 x와 타입 T에 대하여 x.(T)로 표현했을 때, 이는 x가 nil이 아니며, x는 T 타입에 속한다는 점을 확인(assert)하는 것으로 이러한 표현을 "Type Assertion"이라 부른다.
+만약 x가 nil 이거나 x의 타입이 T가 아니라면, 런타임 에러가 발생할 것이고, x가 T 타입인 경우는 T 타입의 x를 리턴한다. 즉, 아래 예제에서 변수 j는 a.(int)로부터 int형 변수 j가 된다.
