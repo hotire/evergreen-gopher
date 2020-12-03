@@ -6,3 +6,7 @@ type error interface {
     Error() string
 }
 ~~~
+
+### Go 에러처리
+
+Go 함수가 결과와 에러를 함께 리턴한다면, 이 에러가 nil 인지를 체크해서 에러가 없는지를 체크할 수 있다
