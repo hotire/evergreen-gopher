@@ -12,4 +12,9 @@ func main() {
 	for j := 1; j <= i; j++ {
 		fmt.Println(j)
 	}
+
+	for {
+		fmt.Println("break")
+		break
+	}
 }
