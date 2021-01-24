@@ -2,5 +2,9 @@
 
 ![gopher](doc/gopher.png)
 
-### Helloworld
+### Basic
 http://golang.site/Go/Basics
+
+### gobyexample
+
+https://gobyexample.com/
