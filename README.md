@@ -7,4 +7,5 @@ http://golang.site/Go/Basics
 
 ### gobyexample
 
-https://gobyexample.com/
+- https://gobyexample.com/
+- https://www.joinc.co.kr/w/GoLang/example/
